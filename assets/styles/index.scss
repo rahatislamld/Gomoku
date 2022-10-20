@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Euphoria+Script');
+$grid-size: 40px;
+$square-color: #c39d6d;
+
+#test {
+  color: red;
+}
+
+body {
+  background: #474747;
+  margin: 0px;
+}
+
+.square {
+  background: $square-color;
+  margin-top: 2px;
+  margin-right: 2px;
+
+  border: 1px solid $square-color;
+  border-radius: 2px;
+  font-size: 0.5 * $grid-size;
+  font-weight: bold;
+  line-height: $grid-size;
+  float: left;
+
+  padding: 0;
+  text-align: center;
+
+  height: $grid-size;
+  width: $grid-size;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.game {
+  margin-top: 15px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.panel {
+  color: white;
+  width: calc(100% - 20 * #{$grid-size});
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+  margin-top: 0px;
+  font-family: 'Lato', sans-serif;
+  line-height: 25px;
+  .title {
+    font-size: 25px;
+  }
+
+  img {
+    margin-left: 5px;
+    width: 16px;
+  }
+}
+
